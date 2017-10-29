@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<!-- 控制台输出 -->
+	<properties>
+		<property name="PATTERN"
+			value="%d{yyyy-MM-dd HH:mm:ss.SSS} |-%-5level---> [%thread] --->%c [%L] --->%msg%n" />
+	</properties>
+	<appenders>
+		<Console name="CONSOLE" target="system_out">
+			<PatternLayout pattern="${PATTERN}"></PatternLayout>
+		</Console>
+	</appenders>
+	<loggers>
+		<logger name="com.wang" level="debug"></logger>
+		<root level="info">
+			<appenderref ref="CONSOLE"></appenderref>
+		</root>
+	</loggers>
+</configuration>
